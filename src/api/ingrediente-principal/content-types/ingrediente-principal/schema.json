@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredientes_principales",
+  "info": {
+    "singularName": "ingrediente-principal",
+    "pluralName": "ingredientes-principales",
+    "displayName": "IngredientesPrincipales"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

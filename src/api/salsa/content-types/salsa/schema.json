@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "salsas",
+  "info": {
+    "singularName": "salsa",
+    "pluralName": "salsas",
+    "displayName": "Salsas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

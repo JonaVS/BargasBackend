@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_previews",
+  "info": {
+    "singularName": "menu-preview",
+    "pluralName": "menu-previews",
+    "displayName": "MenuPreviews"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "producto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::producto.producto"
+    },
+    "imagen": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

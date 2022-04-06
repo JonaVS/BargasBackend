@@ -1,0 +1,30 @@
+{
+  "name": "bargas-strapi-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Bargas Admin Dashboard",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/strapi": "4.1.7",
+    "@strapi/plugin-users-permissions": "4.1.7",
+    "@strapi/plugin-i18n": "4.1.7",
+    "better-sqlite3": "7.4.6"
+  },
+  "author": {
+    "name": "JonaVS"
+  },
+  "strapi": {
+    "uuid": "1eca5e4a-03e5-4af7-b002-731779192119"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

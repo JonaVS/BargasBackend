@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "singularName": "producto",
+    "pluralName": "productos",
+    "displayName": "Productos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "precio": {
+      "type": "integer",
+      "required": true
+    },
+    "imagen": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categoria.categoria"
+    },
+    "ingredientes": {
+      "type": "text",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "disponible": {
+      "type": "boolean",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "descuento": {
+      "type": "integer",
+      "default": 0
+    },
+    "acompanamientos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::acompanamiento.acompanamiento"
+    },
+    "ing_principales": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ingrediente-principal.ingrediente-principal"
+    },
+    "salsas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::salsa.salsa"
+    }
+  }
+}
