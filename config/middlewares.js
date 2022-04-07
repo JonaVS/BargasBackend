@@ -28,11 +28,13 @@ module.exports = [
       ],
     },
   },
+  "global::authCookieGetter",
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
   "strapi::body",
   "strapi::session",
+  "global::authCookieSetter",
   "strapi::favicon",
   "strapi::public",
 ];
