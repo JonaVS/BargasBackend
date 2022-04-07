@@ -14,7 +14,20 @@ module.exports = [
       },
     },
   },
-  "strapi::cors",
+  {
+    name: "strapi::cors",
+    config: {
+      enabled: true,
+      credentials: true,
+      origin: process.env.ALLOWED_ORIGINS.split(','),
+      headers: [
+        "Content-Type",
+        "Authorization",
+        "X-Frame-Options",
+        "access-control-allow-origin",
+      ],
+    },
+  },
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
