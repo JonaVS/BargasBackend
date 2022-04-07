@@ -4,7 +4,8 @@
   "info": {
     "singularName": "producto",
     "pluralName": "productos",
-    "displayName": "Productos"
+    "displayName": "Productos",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,12 +22,12 @@
       "required": true
     },
     "imagen": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "categorias": {
       "type": "relation",
