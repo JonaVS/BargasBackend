@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "menu_pages",
+  "info": {
+    "singularName": "menu-page",
+    "pluralName": "menu-pages",
+    "displayName": "MenuPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "heroImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    }
+  }
+}

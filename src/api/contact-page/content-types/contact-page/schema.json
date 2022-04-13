@@ -1,18 +1,19 @@
 {
   "kind": "singleType",
-  "collectionName": "menus",
+  "collectionName": "contact_pages",
   "info": {
-    "singularName": "menu",
-    "pluralName": "menus",
-    "displayName": "Menu"
+    "singularName": "contact-page",
+    "pluralName": "contact-pages",
+    "displayName": "ContactPage"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "descripcion": {
-      "type": "text"
+    "description": {
+      "type": "text",
+      "required": true
     },
     "heroImage": {
       "allowedTypes": [
