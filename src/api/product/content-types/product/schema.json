@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Products"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categorie.categorie"
+    },
+    "ingredients": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "available": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": false
+    },
+    "discount": {
+      "type": "integer",
+      "max": 100,
+      "min": 0,
+      "default": 0
+    },
+    "sides": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::side.side"
+    },
+    "mains": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::main.main"
+    },
+    "sauces": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sauce.sauce"
+    },
+    "sizes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::size.size"
+    }
+  }
+}

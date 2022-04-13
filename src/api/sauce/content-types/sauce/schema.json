@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sauces",
+  "info": {
+    "singularName": "sauce",
+    "pluralName": "sauces",
+    "displayName": "Sauces"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "available": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

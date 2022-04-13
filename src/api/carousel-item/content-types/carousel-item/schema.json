@@ -11,15 +11,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "titulo": {
+    "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
-    "descripcion": {
+    "description": {
       "type": "text",
       "required": true
     },
-    "imagen": {
+    "image": {
       "allowedTypes": [
         "images"
       ],
@@ -28,7 +29,8 @@
       "required": true
     },
     "link": {
-      "type": "string"
+      "type": "string",
+      "default": "/"
     }
   }
 }

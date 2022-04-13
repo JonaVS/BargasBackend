@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sides",
+  "info": {
+    "singularName": "side",
+    "pluralName": "sides",
+    "displayName": "Sides"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "available": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

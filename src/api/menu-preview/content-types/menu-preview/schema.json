@@ -11,18 +11,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "producto": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::producto.producto"
-    },
-    "imagen": {
+    "image": {
       "allowedTypes": [
         "images"
       ],
       "type": "media",
-      "multiple": false,
-      "required": true
+      "multiple": false
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
     }
   }
 }
