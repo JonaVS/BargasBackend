@@ -1,57 +1,34 @@
-# 🚀 Getting started with Strapi
+## BARGAS RESTOBAR BACKEND
+**NOTE: THIS PROJECT IS UNDER DEVELOPMENT.**
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+## Project Description:
+Concept/prototype website & online ordering platform for a restobar.
 
-### `develop`
+You are currently looking the backend repo. 
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+## Where's the frontend?
+I'm using a Gatsby/React project for that, which you can find here: [BargasFrontend](https://github.com/JonaVS/BargasFrontend)
 
-```
-npm run develop
-# or
-yarn develop
-```
+## Backend features (for now):
 
-### `start`
+- Admin Panel with role based access.
+- Menu products management via CMS user interface.
+- Menu products REST API endpoints.
+- Custom Auth with HttpOnly cookies (just for the frontend client).
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+## Pending backend features:
 
-```
-npm run start
-# or
-yarn start
-```
+- **Backend order placing:** This includes database tables, endpoints logic and communication with a payment gateway.
+- **Admin panel section to manage orders.**
+- **Email sender service:** This is needed to send notifications when the business recives an order, to send invoices to clients and to send password recovery instructions.
+- **REST API endpoints related to users:** This includes getting user placed orders, basic info edit and password change. This is only for authenticated users.
+- **Promos/events:** This includes database tables to store this information and the API endpoints.
+- **Admin panel section to manage promos/events.**
+  
+## Backend & cloud technologies:
 
-### `build`
+- Strapi CMS 
+- Node.js / Koa.js
+- AWS RDS - MySQL
+- Cloudinary
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
