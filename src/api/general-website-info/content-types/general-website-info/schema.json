@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "general_website_infos",
+  "info": {
+    "singularName": "general-website-info",
+    "pluralName": "general-website-infos",
+    "displayName": "GeneralWebsiteInfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "basicLocation": {
+      "type": "text",
+      "required": true
+    },
+    "detailedLocation": {
+      "type": "text",
+      "required": true
+    },
+    "openingHours": {
+      "type": "text",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "generalEmail": {
+      "type": "string",
+      "required": true
+    },
+    "salesEmail": {
+      "type": "string"
+    },
+    "supportEmail": {
+      "type": "string"
+    },
+    "facebookUrl": {
+      "type": "string"
+    },
+    "instagramUrl": {
+      "type": "string"
+    },
+    "tiktokUrl": {
+      "type": "string"
+    },
+    "onlineOrdering": {
+      "type": "boolean",
+      "default": true
+    },
+    "deliveryCost": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
