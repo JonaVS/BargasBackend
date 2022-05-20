@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_pages_about_ordering_cols",
+  "info": {
+    "displayName": "AboutOrderingCols",
+    "icon": "columns"
+  },
+  "options": {},
+  "attributes": {
+    "onlineOrdering": {
+      "type": "text"
+    },
+    "delivery": {
+      "type": "text"
+    },
+    "chatHelp": {
+      "type": "text"
+    }
+  }
+}

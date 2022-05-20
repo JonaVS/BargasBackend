@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pages_about_sub_sections",
+  "info": {
+    "displayName": "AboutSubSection",
+    "icon": "pager"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
