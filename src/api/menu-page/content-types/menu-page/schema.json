@@ -4,7 +4,8 @@
   "info": {
     "singularName": "menu-page",
     "pluralName": "menu-pages",
-    "displayName": "MenuPage"
+    "displayName": "MenuPage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,12 +17,17 @@
       "required": true
     },
     "heroImage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": false
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "seoData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.seo-data"
     }
   }
 }
