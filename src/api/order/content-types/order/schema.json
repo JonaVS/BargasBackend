@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Orders",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderId": {
+      "type": "uid",
+      "required": true
+    },
+    "paymentId": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "clientName": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "clientEmail": {
+      "type": "string",
+      "required": true,
+      "regex": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$"
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "delivered",
+        "pending",
+        "cancelled"
+      ]
+    },
+    "paymentType": {
+      "type": "enumeration",
+      "enum": [
+        "card",
+        "sinpe"
+      ]
+    },
+    "subtotal": {
+      "type": "integer",
+      "required": true
+    },
+    "total": {
+      "type": "integer",
+      "required": true
+    },
+    "clientId": {
+      "type": "string"
+    },
+    "deliveryCost": {
+      "type": "integer"
+    },
+    "province": {
+      "type": "enumeration",
+      "enum": [
+        "Cartago",
+        "San José"
+      ],
+      "default": "Cartago"
+    },
+    "orderDetails": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order-detail.order-detail",
+      "mappedBy": "order"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "orders"
+    },
+    "electronicInvoice": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

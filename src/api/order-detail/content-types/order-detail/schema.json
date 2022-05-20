@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_details",
+  "info": {
+    "singularName": "order-detail",
+    "pluralName": "order-details",
+    "displayName": "OrderDetails",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "price": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "quantity": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "total": {
+      "type": "integer",
+      "required": true
+    },
+    "main": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::main.main"
+    },
+    "side": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::side.side"
+    },
+    "sauce": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sauce.sauce"
+    },
+    "size": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::size.size"
+    },
+    "extraInfo": {
+      "type": "text"
+    },
+    "discount": {
+      "type": "integer",
+      "max": 100,
+      "min": 0
+    },
+    "order": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::order.order",
+      "inversedBy": "orderDetails"
+    }
+  }
+}
