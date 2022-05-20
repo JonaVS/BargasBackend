@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "terms_and_conditions_pages",
+  "info": {
+    "singularName": "terms-and-conditions-page",
+    "pluralName": "terms-and-conditions-pages",
+    "displayName": "TermsAndConditionsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "markdown": {
+      "type": "richtext",
+      "required": false
+    },
+    "seoData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.seo-data"
+    }
+  }
+}
