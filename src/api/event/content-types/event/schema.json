@@ -4,7 +4,8 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Events"
+    "displayName": "Events",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,14 +23,15 @@
       "type": "datetime"
     },
     "endDate": {
-      "type": "date"
+      "type": "datetime"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
