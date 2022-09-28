@@ -6,7 +6,7 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:"],
+          "connect-src": ["'self'", "https:", "*.greenpay.me"],
           "img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
           "media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
           upgradeInsecureRequests: null,
@@ -24,7 +24,7 @@ module.exports = [
         "Content-Type",
         "Authorization",
         "X-Frame-Options",
-        "access-control-allow-origin",
+        "Access-Control-Allow-Origin",
       ],
     },
   },
