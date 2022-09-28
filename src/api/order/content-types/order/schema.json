@@ -51,8 +51,9 @@
     "paymentType": {
       "type": "enumeration",
       "enum": [
-        "card",
-        "sinpe"
+        "Card",
+        "Sinpe",
+        "Cash"
       ]
     },
     "subtotal": {
