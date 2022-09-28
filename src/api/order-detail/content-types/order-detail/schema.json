@@ -31,26 +31,6 @@
       "type": "integer",
       "required": true
     },
-    "main": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::main.main"
-    },
-    "side": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::side.side"
-    },
-    "sauce": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::sauce.sauce"
-    },
-    "size": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::size.size"
-    },
     "extraInfo": {
       "type": "text"
     },
@@ -64,6 +44,18 @@
       "relation": "manyToOne",
       "target": "api::order.order",
       "inversedBy": "orderDetails"
+    },
+    "main": {
+      "type": "string"
+    },
+    "side": {
+      "type": "string"
+    },
+    "sauce": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
     }
   }
 }
