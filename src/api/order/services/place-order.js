@@ -23,12 +23,16 @@ const placeOrder = async (clientOrder) => {
         ...clientOrder.orderGeneralInfo,
       },
       fields: [
-        "id",
+        "orderId",
         "total",
         "clientName",
         "clientEmail",
         "province",
         "address",
+        "phone",
+        "date",
+        "deliveryCost",
+        "paymentType",
       ],
     });
 
@@ -42,7 +46,16 @@ const placeOrder = async (clientOrder) => {
             product: cartItem.productId,
             ...cartItem,
           },
-          fields: ["id", "quantity", "total"],
+          fields: [
+            "id",
+            "quantity",
+            "total", 
+            "extraInfo",
+            "main",
+            "side",
+            "sauce",
+            "size",
+          ],
           populate: ["product"],
         }
       );
