@@ -4,11 +4,10 @@ const { v4: uuid } = require("uuid");
 
 //Builds the order object required by the payment gateway.
 const getPaymentGatewayObject = (clientOrder) => {
-  const { orderBasicInfo, orderDetails } = clientOrder;
 
   const getOrderDetails = () => {
     const gatewayOrderDetails = [];
-    for (const orderDetail of orderDetails) {
+    for (const orderDetail of clientOrder.orderDetails) {
       gatewayOrderDetails.push({
         description: orderDetail.product.name,
         skuId: orderDetail.product.id.toString(),
@@ -26,25 +25,25 @@ const getPaymentGatewayObject = (clientOrder) => {
     secret: process.env.GREENPAY_SECRET,
     merchantId: process.env.GREENPAY_MERCHANT_ID,
     terminal: process.env.GREENPAY_TERMINAL_ID,
-    amount: orderBasicInfo.total,
+    amount: clientOrder.total,
     currency: "CRC",
     description: "Pago orden Bargas",
-    orderReference: orderBasicInfo.id.toString(),
+    orderReference: clientOrder.id.toString(),
     callback: "http://localhost:8000/app/ordering-result",
     additional: {
       customer: {
-        name: orderBasicInfo.clientName,
-        email: orderBasicInfo.clientEmail,
+        name: clientOrder.clientName,
+        email: clientOrder.clientEmail,
         identification: "N/A",
         billingAddress: {
           country: "CR",
-          province: orderBasicInfo.province,
-          street1: orderBasicInfo.address,
+          province: clientOrder.province,
+          street1: clientOrder.address,
         },
         shippingAddress: {
           country: "CR",
-          province: orderBasicInfo.province,
-          street1: orderBasicInfo.address,
+          province: clientOrder.province,
+          street1: clientOrder.address,
         },
       },
       products: getOrderDetails(),

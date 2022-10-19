@@ -61,7 +61,7 @@ const placeOrder = async (clientOrder) => {
       );
       orderDetails.push(orderDetail);
     }
-    return OperationResult.success({ orderBasicInfo, orderDetails });
+    return OperationResult.success({...orderBasicInfo, orderDetails: orderDetails});
   } catch (err) {
     return OperationResult.error("Error placing order");
   }
