@@ -16,6 +16,7 @@
     "@strapi/provider-upload-cloudinary": "^4.4.3",
     "@strapi/strapi": "4.4.3",
     "axios": "^1.1.2",
+    "email-validator": "^2.0.4",
     "moment-timezone": "^0.5.37",
     "mysql": "^2.18.1",
     "strapi-plugin-email-designer": "^2.1.1",
