@@ -1,6 +1,6 @@
 "use strict";
 
-const axios = require("axios").default;
+const axios = require('axios');
 const { getPaymentGatewayObject } = require("./helpers/paymentGatewayObj");
 const { OperationResult } = require("../../../utils/OperationResult.js");
 
