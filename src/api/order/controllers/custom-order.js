@@ -35,13 +35,27 @@ module.exports = {
           .service("api::order.payment-gateway")
           .getPaymentSessionToken(placingResult.data);
 
-        if (!gatewayResult.success)
-        return ctx.internalServerError(gatewayResult.errorMessage, { details: "" });
+        if (!gatewayResult.success){
+          return ctx.internalServerError(gatewayResult.errorMessage, { details: "" }); 
+        }
 
         const session = gatewayResult.data.session
         checkoutFormUrl = `${process.env.GREENPAY_CHECKOUT_URL}${session}`
-      } 
+      }
 
+      /*
+        Send order placing notification via Email to business and client
+        ONLY IF the uses payment method IS NOT CARD.
+
+        Notifications for Orders placed with Card are handled by a server POST endpoint which
+        the payment gateway uses as a Webhook to send the payment result.
+      */
+     if (paymentType != "Card") {
+       await strapi
+         .service("api::order.order-mail-sender")
+         .sendOrderNotificationEmail(placingResult.data);
+     } 
+ 
       ctx.body = {success: true, paymentGateway: paymentType === "Card" ? checkoutFormUrl : ''}
 
     } catch (err) {
