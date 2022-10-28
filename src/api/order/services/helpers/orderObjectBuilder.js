@@ -13,7 +13,7 @@ const getServerGeneratedFields = (clientOrder) => {
     paymentId: '',
     date: moment().tz("America/Costa_Rica").format(),
     status: "pending",
-    user: null,
+    user: clientOrder.user ? clientOrder.user : null,
     deliveryCost: 2000,
     subtotal: orderTotal,
     total: orderTotal + 2000,

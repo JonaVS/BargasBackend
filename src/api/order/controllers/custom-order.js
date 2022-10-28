@@ -7,6 +7,15 @@ module.exports = {
     const paymentType = clientOrder.orderGeneralInfo.paymentType 
     let checkoutFormUrl = ''
 
+    /*
+      Attach the user id to the order Data if the request is from a valid authenticaded user.
+      This is needed to link  authenticated users with orders later on during order creation.
+    */ 
+    if (ctx.state.user) {
+      const { id } = ctx.state.user
+      clientOrder.user = id
+    }
+  
     try {
       //Inspects and rebuild client cart data.
       const inspectionResult = await strapi
