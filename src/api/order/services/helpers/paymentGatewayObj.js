@@ -1,7 +1,5 @@
 "use strict";
 
-const { v4: uuid } = require("uuid");
-
 //Builds the order object required by the payment gateway.
 const getPaymentGatewayObject = (clientOrder) => {
 

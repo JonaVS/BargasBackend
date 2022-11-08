@@ -19,8 +19,8 @@
     "email-validator": "^2.0.4",
     "moment-timezone": "^0.5.38",
     "mysql": "^2.18.1",
-    "strapi-plugin-email-designer": "^2.1.1",
-    "uuid": "^9.0.0"
+    "nanoid": "^3.3.4",
+    "strapi-plugin-email-designer": "^2.1.1"
   },
   "author": {
     "name": "JonaVS"

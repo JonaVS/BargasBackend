@@ -15,7 +15,7 @@ const placeOrder = async (clientOrder) => {
   let orderDetails = [];
 
   try {
-    const serverOrderFields = getServerGeneratedFields(clientOrder);
+    const serverOrderFields = await getServerGeneratedFields(clientOrder);
 
     orderBasicInfo = await strapi.entityService.create("api::order.order", {
       data: {
@@ -63,6 +63,7 @@ const placeOrder = async (clientOrder) => {
     }
     return OperationResult.success({...orderBasicInfo, orderDetails: orderDetails});
   } catch (err) {
+    console.log(error)
     return OperationResult.error("Error placing order");
   }
 };
