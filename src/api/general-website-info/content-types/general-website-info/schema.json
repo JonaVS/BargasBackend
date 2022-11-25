@@ -54,6 +54,18 @@
     "deliveryCost": {
       "type": "integer",
       "required": true
+    },
+    "businessLat": {
+      "type": "float"
+    },
+    "businessLng": {
+      "type": "float"
+    },
+    "wazeLat": {
+      "type": "string"
+    },
+    "wazeLng": {
+      "type": "string"
     }
   }
 }
