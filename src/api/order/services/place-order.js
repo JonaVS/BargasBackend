@@ -63,7 +63,6 @@ const placeOrder = async (clientOrder) => {
     }
     return OperationResult.success({...orderBasicInfo, orderDetails: orderDetails});
   } catch (err) {
-    console.log(error)
     return OperationResult.error("Error placing order");
   }
 };
