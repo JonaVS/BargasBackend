@@ -1,5 +1,4 @@
-## BARGAS RESTOBAR BACKEND
-**NOTE: THIS PROJECT IS UNDER DEVELOPMENT.**
+## BARGAS BACKEND (Strapi headless CMS)
 
 ## Project Description:
 Concept/prototype website & online ordering platform for a restobar.
@@ -7,28 +6,32 @@ Concept/prototype website & online ordering platform for a restobar.
 You are currently looking the backend repo. 
 
 ## Where's the frontend?
-I'm using a Gatsby/React project for that, which you can find here: [BargasFrontend](https://github.com/JonaVS/BargasFrontend)
+I'm using a Gatsby/React project for that, which you can find [here](https://github.com/JonaVS/BargasFrontend).
 
-## Backend features (for now):
+I'm not a monorepo fan :sweat_smile:
+
+## What's Strapi?
+Strapi is a headlesss CMS that can be self-hosted and fully customizable. If interested, visit their oficial [site](https://strapi.io/) to learn more.
+
+## Backend/admin panel features:
 
 - Admin Panel with role based access.
-- Menu products management via CMS user interface.
-- Menu products REST API endpoints.
-- Custom Auth with HttpOnly cookies (just for the frontend client).
-
-## Pending backend features:
-
-- **Backend order placing:** This includes database tables, endpoints logic and communication with a payment gateway.
-- **Admin panel section to manage orders.**
-- **Email sender service:** This is needed to send notifications when the business recives an order, to send invoices to clients and to send password recovery instructions.
-- **REST API endpoints related to users:** This includes getting user placed orders, basic info edit and password change. This is only for authenticated users.
-- **Promos/events:** This includes database tables to store this information and the API endpoints.
-- **Admin panel section to manage promos/events.**
+- Management of: general website info, menu products, event/promos, orders and users.
+- Storage of media assets via Cloudinary services.
+- Menu products REST API endpoints. Only GET endpoints are open to the public.
+- Custom Auth with HttpOnly cookies. The default Strapi implementation was overriden.
+- Backend order placing implementation with custom API Endpoints, logic and integration with [Greenpay](https://greenpay.me/) payment gateway.
+- Custom endpoint that the payment gateway uses as a Webhook to notify the Strapi backend for payment transactions to automatically update order payment related info.
+- Integration of Zoho mail services for Email notifications.
+- Email designer via admin panel plugin.
+- REST API endpoints + custom policies related to users. This includes getting user placed orders, basic info edit and password change. This endpoints are only for authenticated users.
   
-## Backend & cloud technologies:
+## Backend technologies, cloud technologies & other services:
 
 - Strapi CMS 
 - Node.js / Koa.js
 - AWS RDS - MySQL
 - Cloudinary
+- Zoho mail services
+- Greenpay payment gateway
 
